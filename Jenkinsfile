@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        DOCKER_IMAGE = "komalbhagepalle/welcome-to-2025:latest"
+    }
     stages {
         stage('Checkout Code') {
             steps {
