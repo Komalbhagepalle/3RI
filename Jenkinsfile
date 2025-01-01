@@ -39,10 +39,13 @@ pipeline {
         }
 	stage('Deploy with Ansible') {
             steps {
-                ansiblePlaybook(
-                    playbook: 'deploy.yml',
-                    inventory: 'inventory.ini'
-                )
+                script {
+                    // Disable StrictHostKeyChecking
+                    sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
+                    
+                    // Run your Ansible playbook
+                    sh 'ansible-playbook -i inventory.ini deploy.yml'
+                }
             }
         }
     }
