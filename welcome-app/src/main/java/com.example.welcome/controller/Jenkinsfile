@@ -7,5 +7,17 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Build with Maven') {
+            steps {
+                // Build the project using Maven
+                sh 'mvn clean package'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                // Run tests
+                sh 'mvn test'
+            }
+        }
     }
 }
