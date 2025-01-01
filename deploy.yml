@@ -1,0 +1,13 @@
+---
+- name: Deploy Welcome App
+  hosts: webserver
+  tasks:
+    - name: Pull Docker Image
+      shell: docker pull komalbhagepalle/welcome-to-2025:latest
+
+    - name: Stop Existing Container
+      shell: docker stop welcome-app || true && docker rm welcome-app || true
+
+    - name: Run Docker Container
+      shell: docker run -d --name welcome-app -p 8081:8081 komalbhagepalle/welcome-to-2025:latest
+

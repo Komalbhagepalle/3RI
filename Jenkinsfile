@@ -37,5 +37,25 @@ pipeline {
                 }
             }
         }
+	stage('Deploy with Ansible') {
+            steps {
+                ansiblePlaybook(
+                    playbook: 'deploy.yml',
+                    inventory: 'inventory.ini',
+                    extras: '--ask-vault-pass'
+                )
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Pipeline Completed.'
+        }
+	success {
+            echo 'Pipeline succeeded!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
     }
 }
