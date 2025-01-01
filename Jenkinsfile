@@ -41,8 +41,7 @@ pipeline {
             steps {
                 ansiblePlaybook(
                     playbook: 'deploy.yml',
-                    inventory: 'inventory.ini',
-                    extras: '--ask-vault-pass'
+                    inventory: 'inventory.ini'
                 )
             }
         }
