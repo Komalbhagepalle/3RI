@@ -63,7 +63,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.example.welcomeapp.WelcomeAppApplication</mainClass>
+                    <mainClass>com.example.welcome.WelcomeAppApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
