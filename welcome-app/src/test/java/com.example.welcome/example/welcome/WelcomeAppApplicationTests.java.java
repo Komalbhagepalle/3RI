@@ -8,7 +8,5 @@ class WelcomeAppApplicationTests {
 
     @Test
     void contextLoads() {
-        // Verifies that the application context loads without issues
     }
 }
-
