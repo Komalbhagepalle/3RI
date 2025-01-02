@@ -24,14 +24,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version>  <!-- Version added -->
+            <version>3.1.6</version>  <!-- Version added -->
         </dependency>
 
         <!-- Spring Boot Starter Test (for testing) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${spring.boot.version}</version>  <!-- Version added -->
+            <version>3.1.6</version>  <!-- Version added -->
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -54,7 +54,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version>
+                <version>3.1.6</version>
                 <configuration>
                     <mainClass>com.example.welcome.WelcomeAppApplication</mainClass>
                 </configuration>
