@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        githubPush()
+    }
     environment {
         DOCKER_IMAGE = "komalbhagepalle/welcome-to-2025:latest"
     }
