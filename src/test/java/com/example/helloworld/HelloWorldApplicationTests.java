@@ -19,6 +19,6 @@ public class HelloWorldApplicationTests {
     public void testHelloWorld() {
         String url = "http://localhost:" + port + "/";
         String result = restTemplate.getForObject(url, String.class);
-        assertEquals("welcome to 2025!", result, "The message should be 'welcome to 2025!'");
+        assertEquals("welcome to 3RI", result, "The message should be 'welcome to 3RI'");
     }
 }

@@ -15,6 +15,6 @@ public class HelloWorldApplication {
 
     @GetMapping("/")
     public String sayHello() {
-        return "welcome to 2025!";
+        return "welcome to 3RI";
     }
 }
