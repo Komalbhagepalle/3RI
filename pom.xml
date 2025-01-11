@@ -41,6 +41,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
+                <configuration>
+                    <mainClass>com.example.helloworld.HelloWorldApplication</mainClass> <!-- Specify your main class -->
+                </configuration>
             </plugin>
 
             <!-- Maven Compiler Plugin for compiling Java files -->
