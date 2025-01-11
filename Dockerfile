@@ -1,10 +1,11 @@
-FROM openjdk:17-jdk-slim
+# Use an OpenJDK base image
+FROM openjdk:17-jdk-alpine
 
+# Set working directory
 WORKDIR /app
 
-COPY target/welcome-app-1.0.jar /app/welcome-app.jar
+# Copy the jar file into the container
+COPY target/hello-world-1.0-SNAPSHOT-jar-with-dependencies.jar app.jar
 
-EXPOSE 8081
-
-ENTRYPOINT ["java", "-jar", "/app/welcome-app.jar"]
-
+# Specify the entry point
+ENTRYPOINT ["java", "-jar", "app.jar"]
